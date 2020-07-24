@@ -36,8 +36,7 @@ document.body.appendChild(element);
 // questions
 var currentQuestionIndex = 0;
 
-const myQuestions = [
-	{
+const myQuestions = [{
 		question: "What dose HTML Stand for?",
 		answers: {
 			a: "Hyper Text Markup Language",
@@ -71,8 +70,7 @@ const myQuestions = [
 	},
 
 	{
-		question:
-			"String Values must be closed within _____ when being assigned to varibles?",
+		question: "String Values must be closed within _____ when being assigned to varibles?",
 		answers: {
 			a: "Commas",
 			b: "Curly Brackets",
@@ -94,8 +92,7 @@ const myQuestions = [
 	},
 
 	{
-		question:
-			"If you want to view your code on a web browser you should right click then select?",
+		question: "If you want to view your code on a web browser you should right click then select?",
 		answers: {
 			a: "Inspect",
 			b: "Cast",
@@ -117,20 +114,29 @@ const myQuestions = [
 	},
 ];
 
+var screenDiv = document.querySelector("#screen");
+
 function startQuiz() {
-	document.getElementsByTagName("screen")[0].innerHTML = "";
-	document.body.innerHTML = "";
-	nextQuestion();
-}
-function nextQuestion() {
-	// clears DOM
-	// makes an element for display question selected with currentQuestionIndex
-	// makes elements for each choice
-	// adds event listeners to each choice element that call nextQuestion on click
-	// append question element and choice elements to DOM
-	currentQuestionIndex++;
-}
-// instead of calling startQuiz right when the script runs
-// startQuiz()
-// let's assign it to a button click
-document.querySelector("#bigRed").addEventListener("click", startQuiz);
+	console.log("Did I make it here?");
+	screenDiv.innerText = "";
+	screenDiv.innerText = myQuestions[0].question;
+	console.log("myQuestions[0].question: ", myQuestions[0].question);
+
+	// create a for loop to list your answers:
+	(var i = 0; i < myQuestions[0].answers.length; i++) {
+		// 	you will need to iterate through your answers and list each one of them
+		// 	/You will likely want to create a button for each answer to select the right or wrong answer.
+		// }
+
+		function nextQuestion() {
+			// clears DOM
+			// makes an element for display question selected with currentQuestionIndex
+			// makes elements for each choice
+			// adds event listeners to each choice element that call nextQuestion on click
+			// append question element and choice elements to DOM
+			currentQuestionIndex++;
+		}
+		// instead of calling startQuiz right when the script runs
+		startQuiz();
+		// let's assign it to a button click
+		document.querySelector("#bigRed").addEventListener("click", startQuiz);
