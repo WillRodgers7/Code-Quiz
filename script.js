@@ -161,11 +161,12 @@ function nextQuestion() {
 
 }
 
-function endGamePrompts() {
-	myQuestions.alert("You scored" + myQuestions + "out of 8");
-	prompt("Please exnter your name for the high score");
-	//handle the prompt response and then you're done.
+var popup = prompt("Please enter your name for the high score");
+
+if (popup == null || popup == "") {
+	alert = "you scored _ out of 7";
 }
+
 
 
 
