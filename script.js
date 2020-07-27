@@ -87,6 +87,7 @@ var choicesLine = document.getElementById("choices");
 
 
 
+
 // button start
 function startQuiz() {
 	console.log("Did I make it here?");
@@ -116,6 +117,7 @@ function startQuiz() {
 		answerChoice.textContent = thisQuestion.answers[i];
 		answerChoice.onclick = answerSelector;
 		choicesLine.appendChild(answerChoice);
+
 	}
 
 }
@@ -135,6 +137,7 @@ function answerSelector() {
 	}
 	currentQuestionIndex++;
 	nextQuestion();
+
 }
 
 // create a for loop to list your answers:
@@ -151,6 +154,9 @@ function nextQuestion() {
 		answerChoice.textContent = thisQuestion.answers[i];
 		answerChoice.onclick = answerSelector;
 		choicesLine.appendChild(answerChoice);
+		alert("Yout scored _ out of 8!")
+		prompt("Please enter your name for the high score!")
+
 	}
 
 }
