@@ -120,6 +120,7 @@ function startQuiz() {
 
 	}
 
+
 }
 
 // subtract time & enter intials, give high score
@@ -129,6 +130,7 @@ function answerSelector() {
 		console.log("incorrect");
 		countDownDate = countDownDate - 10
 
+
 		// enter intials, give high score
 
 	} else {
@@ -137,6 +139,7 @@ function answerSelector() {
 	}
 	currentQuestionIndex++;
 	nextQuestion();
+
 
 }
 
@@ -154,12 +157,18 @@ function nextQuestion() {
 		answerChoice.textContent = thisQuestion.answers[i];
 		answerChoice.onclick = answerSelector;
 		choicesLine.appendChild(answerChoice);
-		alert("Yout scored _ out of 8!")
-		prompt("Please enter your name for the high score!")
-
 	}
 
 }
+
+function pop() {
+	for (let index = 0; index < myQuestions.length; index++) {
+		choicesLine.alert("Yout scored _ out of 8!")
+		prompt("Please enter your name for the high score!")
+	}
+}
+
+
 
 // let's assign it to a button click
 document.querySelector("#bigRed").addEventListener("click", startQuiz);
