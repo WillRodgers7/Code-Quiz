@@ -6,6 +6,7 @@ p {
     text-align: right;
     font-size: 50px;
     margin-top: 0px;
+
 }
 
 h1 {
@@ -26,6 +27,7 @@ h2 {
     position: relative;
     margin-left: 45%;
 
+
 }
 
 a {
@@ -42,4 +44,8 @@ a {
 
 .choice {
     padding: 15px 32px;
+    color: white;
+    background-color: #dc3444;
+    text-align: center;
+    width: 25%;
 }

@@ -1,21 +1,3 @@
-//Timer
-var countDownDate = 60;
-
-// Update the count down every 1 second
-var x = setInterval(function () {
-	countDownDate = countDownDate - 1;
-	document.getElementById("demo").innerHTML = countDownDate + "s ";
-
-	// If the count down is over, write some text
-	if (countDownDate < 0) {
-		clearInterval(x);
-		document.getElementById("demo").innerHTML = "EXPIRED";
-	}
-}, 1000);
-
-
-
-
 // questions
 const myQuestions = [{
 		question: "What dose HTML Stand for?",
@@ -95,6 +77,7 @@ const myQuestions = [{
 	},
 ];
 
+var countDownDate = 60;
 var currentQuestionIndex = 0;
 var screenDiv = document.querySelector("#screen");
 var questionDiv = document.querySelector("#question-div");
@@ -111,6 +94,17 @@ function startQuiz() {
 	console.log(thisQuestion)
 	screenDiv.innerText = "";
 	questionLine.textContent = thisQuestion.question;
+
+	var x = setInterval(function () {
+		countDownDate = countDownDate - 1;
+		document.getElementById("demo").innerHTML = countDownDate + "s ";
+
+		// If the count down is over, write some text
+		if (countDownDate < 0) {
+			clearInterval(x);
+			document.getElementById("demo").innerHTML = "EXPIRED";
+		}
+	}, 1000);
 
 
 	// create a for loop to list your questions:
