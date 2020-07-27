@@ -161,11 +161,10 @@ function nextQuestion() {
 
 }
 
-function pop() {
-	for (let index = 0; index < myQuestions.length; index++) {
-		choicesLine.alert("Yout scored _ out of 8!")
-		prompt("Please enter your name for the high score!")
-	}
+function endGamePrompts() {
+	myQuestions.alert("You scored" + myQuestions + "out of 8");
+	prompt("Please exnter your name for the high score");
+	//handle the prompt response and then you're done.
 }
 
 
