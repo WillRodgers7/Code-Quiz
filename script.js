@@ -136,9 +136,15 @@ function answerSelector() {
 	} else {
 		console.log("correct")
 	}
-	currentQuestionIndex++;
-	nextQuestion();
 
+	currentQuestionIndex++;
+
+	if (currentQuestionIndex === myQuestions.length) {
+		promptName();
+	} else {
+
+		nextQuestion();
+	}
 
 }
 
@@ -161,17 +167,12 @@ function nextQuestion() {
 
 }
 
-if (currentQuestionIndex === myQuestions.length) {
-	promptName();
-}
 
 function promptName() {
+	var tell = alert("you scored" + choicesLine + ("out of 7"))
 	var popup = prompt("Please enter your name for the high score");
 
 
-	if (currentQuestionIndex === myQuestions.length) {
-		promptName();
-	}
 	if (popup == null || popup == "") {
 		alert = "you scored _ out of 7";
 	}
