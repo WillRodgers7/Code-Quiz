@@ -7,6 +7,14 @@ node.textContent = dispHigh;
 document.getElementById("highscore").appendChild(node);
 
 
+var dispScore = localStorage.getItem('score');
+console.log(dispScore);
+
+
+var node1 = document.createElement("p");
+node1.textContent = dispScore;
+document.getElementById("highscore1").appendChild(node1);
+
 
 
 //in the highscore html you need to display the name //create a html page hear

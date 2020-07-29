@@ -146,9 +146,13 @@ function answerSelector() {
 	} else {
 
 		nextQuestion();
+
 	}
 
 }
+
+
+// if time =  0 then give pop up
 
 
 // create a for loop to list your answers:
