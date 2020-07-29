@@ -6,8 +6,8 @@ This is a fun and action packed quiz you can take about coding. With this applic
 
 #2 Select an Answer
 
-#4 pay attention to the timer
+#4 Pay attention to the timer
 
-#6 concole log the score
+#6 View your score
 
 #7 Enter your name for the high score

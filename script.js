@@ -175,7 +175,7 @@ function promptName() {
 	var popup = prompt("Please enter your name for the high score");
 	console.log("user input: ", popup);
 	localStorage.setItem("name", popup);
-
+	localStorage.setItem("score", score);
 
 	if (popup == null || popup == "") {
 		alert = "you scored _ out of 7";
