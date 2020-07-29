@@ -84,6 +84,7 @@ var questionDiv = document.querySelector("#question-div");
 var gameDiv = document.querySelector("#game");
 var questionLine = document.getElementById("question");
 var choicesLine = document.getElementById("choices");
+var score = 0;
 
 
 
@@ -135,6 +136,7 @@ function answerSelector() {
 
 	} else {
 		console.log("correct")
+		score++
 	}
 
 	currentQuestionIndex++;
@@ -169,8 +171,10 @@ function nextQuestion() {
 
 
 function promptName() {
-	var tell = alert("you scored" + choicesLine + ("out of 7"))
+	var tell = alert("Your score is " + score + " out of 7")
 	var popup = prompt("Please enter your name for the high score");
+	console.log("user input: ", popup);
+	localStorage.setItem("name", popup);
 
 
 	if (popup == null || popup == "") {
